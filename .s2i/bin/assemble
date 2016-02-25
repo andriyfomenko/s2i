@@ -23,7 +23,8 @@ fi
 echo "---> Prepare application user/directories..."
 export APPROOT=/opt/approot
 
-adduser app --home $APPROOT 
+mkdir $APPROOT
+useradd app -d $APPROOT 
 chown app.app $APPROOT
 
 echo "---> Installing application source..."
