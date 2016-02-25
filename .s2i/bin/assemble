@@ -21,8 +21,11 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
 fi
 
 echo "---> Prepare application user/directories..."
-export APPROOT=/opt/app-root
-adduser app -d $APPROOT && mkdir $APPROOT && chown app.app $APPROOT
+export APPROOT=/opt/approot
+
+mkdir $APPROOT
+adduser app -d $APPROOT 
+chown app.app $APPROOT
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. $APPROOT
