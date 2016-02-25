@@ -1,0 +1,19 @@
+{
+  "name": "nodehapi",
+  "version": "1.0.3",
+  "description": "testing Node.JS with HAPI",
+  "author": "",
+  "license": "private",
+  "main": "application.js",
+  "scripts": {
+    "start": "node application.js"
+  },
+  "engines": {
+    "node": "4.3.1",
+    "npm": "2.14.12"
+  },
+  "dependencies": {
+    "hapi": "^12.0.0",
+    "joi": "^7.1.0"
+  }
+}
