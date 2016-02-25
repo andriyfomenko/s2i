@@ -21,11 +21,10 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
 fi
 
 echo "---> Prepare application user/directories..."
-export APPROOT=/opt/approot
 
 mkdir $APPROOT
-useradd app -d $APPROOT 
-chown app.app $APPROOT
+useradd $APPUSER -d $APPROOT 
+chown $APPUSER.$APPUSER $APPROOT
 
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. $APPROOT
@@ -33,3 +32,6 @@ cp -Rf /tmp/src/. $APPROOT
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
 cd $APPROOT
+
+npm install
+
