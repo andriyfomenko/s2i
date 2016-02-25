@@ -2,9 +2,4 @@
 IMAGE_NAME = nodehapi
 
 build:
-	docker build -t $(IMAGE_NAME) .
-
-.PHONY: test
-test:
-	docker build -t $(IMAGE_NAME)-candidate .
-	IMAGE_NAME=$(IMAGE_NAME)-candidate test/run
+	s2i build https://github.com/andriyfomenko/s2i-nodehapi.git node:argon $(IMAGE_NAME) 
