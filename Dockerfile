@@ -21,7 +21,16 @@ MAINTAINER Andriy Fomenko <afomenko@videonext.com>
 # TODO: Set the default CMD for the image
 # CMD ["usage"]
 
+LABEL io.k8s.description="Platform for building 'nodehapi-app'" \
+      io.k8s.display-name="'nodehapi-app' builder 1.0.0" \
+      io.openshift.expose-services="8080:http"
+
+COPY ./.s2i/bin/ /usr/libexec/s2i
+
 RUN useradd app -d /opt/approot && mkdir /opt/approot && chown app.app /opt/approot
+
 USER app
+
 EXPOSE 8080
 
+CMD ["usage"]
