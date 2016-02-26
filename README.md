@@ -12,4 +12,4 @@ s2i build https://github.com/andriyfomenko/s2i-nodehapi.git nodapi-base nodehapi
 
 To run:
 
-docker run  --rm -p 8080:8080 nodehapi-app
+docker run -d -p 8080:8080 nodehapi-app
