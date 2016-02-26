@@ -30,8 +30,7 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. /opt/approot
 
 echo "---> Building application from source..."
-# TODO: Add build steps for your application, eg npm install, bundle install
 cd /opt/approot
 
-npm install
+npm install # most dependencies are already in Docerfile, so this is "catch all" essentially
 
