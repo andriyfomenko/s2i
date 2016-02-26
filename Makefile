@@ -1,5 +1,5 @@
 
-IMAGE_NAME = nodehapi
+IMAGE_NAME = nodehapi-base
 
 build:
 	docker build -t $(IMAGE_NAME) .
