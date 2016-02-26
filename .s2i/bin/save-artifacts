@@ -9,4 +9,4 @@
 #
 # tar cf - <list of files and folders>
 
-tar cf - /opt/$APPROOT/node_modules
+tar cf - /opt/approot/node_modules

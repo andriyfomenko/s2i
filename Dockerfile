@@ -21,7 +21,7 @@ MAINTAINER Andriy Fomenko <afomenko@videonext.com>
 # TODO: Set the default CMD for the image
 # CMD ["usage"]
 
-#RUN adduser app -d /opt/app-root && mkdir /opt/app-root && chown app.app /opt/root
+RUN useradd app -d /opt/approot && mkdir /opt/approot && chown app.app /opt/approot
 USER app
 EXPOSE 8080
 

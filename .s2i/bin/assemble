@@ -22,16 +22,16 @@ fi
 
 echo "---> Prepare application user/directories..."
 
-mkdir $APPROOT
-useradd $APPUSER -d $APPROOT 
-chown $APPUSER.$APPUSER $APPROOT
+#mkdir /opt/approot
+#useradd app -d /opt/approot
+#chown app.app /opt/approot
 
 echo "---> Installing application source..."
-cp -Rf /tmp/src/. $APPROOT
+cp -Rf /tmp/src/. /opt/approot
 
 echo "---> Building application from source..."
 # TODO: Add build steps for your application, eg npm install, bundle install
-cd $APPROOT
+cd /opt/approot
 
 npm install
 
