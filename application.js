@@ -27,7 +27,7 @@ server.route({
     },
     handler: function (request, reply) {
         const namestring = request.params.name? request.params.name : 'HAPI World';
-        reply('Hello, '+namestring+'!');
+        reply('Hello, '+namestring+'!!!');
     }
 });
 
