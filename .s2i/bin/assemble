@@ -30,7 +30,7 @@ echo "---> Installing application source..."
 cp -Rf /tmp/src/. /opt/approot
 
 echo "---> Building application from source..."
-cd /opt/approot
+cd /opt/approot/service
 
 npm install # most dependencies are already in Docerfile, so this is "catch all" essentially
 
