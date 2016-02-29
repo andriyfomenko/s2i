@@ -7,4 +7,4 @@
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
 
-node /opt/approot/application.js
+exec node /opt/approot/application.js
