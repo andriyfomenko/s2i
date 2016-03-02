@@ -30,4 +30,4 @@ echo "---> Building your Node application from source"
 npm install -d
 
 # Fix source directory permissions
-fix-permissions ./
+ls | xargs fix-permissions
