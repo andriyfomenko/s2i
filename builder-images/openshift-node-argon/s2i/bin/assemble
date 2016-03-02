@@ -3,6 +3,7 @@
 set -e
 
 echo "---> Installing application source"
+ls -la /tmp
 cp -Rf /tmp/src/. ./
 
 if [ ! -z $HTTP_PROXY ]; then
@@ -10,7 +11,7 @@ if [ ! -z $HTTP_PROXY ]; then
 	npm config set proxy $HTTP_PROXY
 fi
 
-if [ ! -z $http_proxy ]; then
+if [ ! -z $http_proxy ]; then 
 	echo "---> Setting npm http proxy to $http_proxy"
 	npm config set proxy $http_proxy
 fi
