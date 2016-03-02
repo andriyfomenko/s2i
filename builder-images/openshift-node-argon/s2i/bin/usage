@@ -8,12 +8,12 @@ To use it, install S2I: https://github.com/openshift/source-to-image
 
 Sample invocation:
 
-s2i build <your code repo> [--context-dir=<subdir with package.js>] openshift-node-argon nodejs-sample-app
+s2i build <your code repo> [--context-dir=<subdir with package.js>] openshift_node_argon nodejs-sample-app
 
 You can then run the resulting image via:
 docker run -p 8080:8080 nodejs-sample-app
 
 To import into OpenShift, you would need to have openshift-node-argon image accessible inside OpenShift' Image Repository or hosted in public Repository, then:
-oc new-app <full-path-to-openshift-node-argon>~<your core repo> --strategy=source [--context-dir=<>] [--insecure-registry=true] 
+oc new-app <full-path-to-openshift_node_argon>~<your core repo> --strategy=source [--context-dir=<>] [--insecure-registry=true] 
 
 EOF
