@@ -18,12 +18,12 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_4.x | bash - && \
     rpm -V $INSTALL_PKGS && \
     yum clean all -y
 
-# Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
-COPY ./s2i/bin/ $STI_SCRIPTS_PATH
-
 # Each language image can have 'contrib' a directory with extra files needed to
 # run and build the applications.
 COPY ./contrib/ /opt/app-root
+
+# Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
+COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 
 USER 1001
 
