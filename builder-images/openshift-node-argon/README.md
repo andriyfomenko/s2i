@@ -1,15 +1,5 @@
-# s2i-nodehapi
+# openshift-node-argon : Node.JS v.4 (argon) S2I builder image
 
-Sample project to demo how node.js app (using HAPI) might be packaged with s2i (https://github.com/openshift/source-to-image)
+To build this builderimage, use "make"
 
-
-To build base image, use "make"
-
-After that to compil;e final image:
-
-s2i build https://github.com/andriyfomenko/s2i-nodehapi.git nodapi-base nodehapi-app
-
-
-To run:
-
-docker run -d -p 8080:8080 nodehapi-app
+You can use it locally for S2I builds, but to use it in OpenShift, you would need to eitehr maike it public in Docker Hub OR push it into your local OpenShift Image Registry, for example usign this procedure: http://www.opensourcerers.org/importing-an-external-docker-image-into-red-hat-openshift-v3/
