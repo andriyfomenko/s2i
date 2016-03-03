@@ -10,7 +10,7 @@ Build source into image locally (s2i):
 
 Build/deploy in OpenShift:
 
-> oc new-app <your-builder-image-path-openshift-node-argon>~https://github.com/andriyfomenko/s2i-nodehapi.git --context-dir=service-source/hello-nodejs  --strategy=source [--insecure-registry=true]
+> oc new-app your-builder-image-path-openshift-node-argon~https://github.com/andriyfomenko/s2i-nodehapi.git --context-dir=service-source/hello-nodejs  --strategy=source [--insecure-registry=true]
 
 Remove [broken] objects from OpenShift:
 
